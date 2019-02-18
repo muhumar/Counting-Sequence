@@ -1,0 +1,15 @@
+sequence_list = [1,3,1,4]
+
+num_array = [1,2,4,5,6,7,8,9,1,3,4,1,1,3,1,4,1,3,1,4]
+
+
+def count_sequence(num_array, seq_list):
+    count = 0
+    len_seq_list = len(seq_list)
+    upper_bound = len(num_array) - len_seq_list + 1
+    for i in range(upper_bound):
+        if num_array[i:i + len_seq_list] == seq_list:
+            count += 1
+    return count
+
+print(count_sequence(num_array,sequence_list))
